@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl-multi-source-sqlserver"
+version = "1.0.0"
+description = "ETL que extrai tabelas de Oracle, SAP HANA ou SQL Server e as replica, com fidelidade estrutural, em um SQL Server de destino."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "oracledb>=2.0",
+    "hdbcli>=2.19",
+    "pyodbc>=5.0",
+]
+
+[project.scripts]
+etl-multi-source = "etl_multi_source.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

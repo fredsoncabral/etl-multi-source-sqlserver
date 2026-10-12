@@ -1,0 +1,11 @@
+# Driver Oracle (modo "thin" nativo; "thick" via Instant Client quando
+# ORACLE_CLIENT_LIB_DIR está definido, para Oracle Database < 12.1)
+oracledb>=2.0
+
+# Driver oficial SAP HANA
+hdbcli>=2.19
+
+# Driver SQL Server (origem e destino) - requer o driver ODBC do sistema
+# instalado (ex: "ODBC Driver 18 for SQL Server" da Microsoft) e a
+# biblioteca unixODBC no Linux.
+pyodbc>=5.0
